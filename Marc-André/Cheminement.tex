@@ -1,0 +1,183 @@
+\documentclass[9pt, french]{article}
+\usepackage[landscape, hmargin=1cm, vmargin=1.7cm]{geometry}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+\definecolor{brass}{rgb}{0.71, 0.65, 0.26}
+
+\usepackage{tikz}
+
+%% -----------------------------
+%% tcolorbox configuration
+%% -----------------------------
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{xparse}
+\tcbuselibrary{breakable}
+
+%%
+%% Coloured box "definition" for definitions
+%%
+\DeclareTColorBox{definition}{ o }				% #1 parameter
+{
+	colframe=blue!60!green,colback=blue!5!white, % color of the box
+	breakable, 
+	pad at break* = 0mm, 						% to split the box
+	title = {#1},
+	after title = {\large \hfill \faBook}
+}
+%%
+%% Coloured box "algo" for algorithms
+%%
+\newtcolorbox{algo}[ 1 ]
+{
+	colback = blue!5!white,
+	colframe = purple!75!black,
+	fonttitle = \bfseries,
+	title = {#1},
+	valign = center
+}
+\newtcolorbox{algo2}[ 1 ]
+{
+	colback = blue!5!white,
+	colframe = cyan!75!black,
+	fonttitle = \bfseries,
+	title = {#1},
+	valign = center
+}
+\newtcolorbox{algo3}[ 1 ]
+{
+	colback = blue!5!white,
+	colframe = teal!60!black,
+	fonttitle = \bfseries,
+	title = {#1},
+	valign = center
+}
+%%
+%% Coloured box "formula" for formulas
+%%
+\newtcolorbox{formula}[ 1 ]
+{
+	colback = green!5!white,
+	colframe = green!75!black,
+	fonttitle = \bfseries,title=#1
+}
+
+
+\begin{document}
+
+\section*{\center{Cheminement - Baccalauréat en Actuariat}}
+
+\center{Marc-André Devost}
+
+\bigskip
+
+\begin{multicols*}{3}
+
+\center{\textbf{Année 1}}
+
+\medskip
+
+\begin{algo}{Réussis - Automne 2018}
+\begin{enumerate}
+	\item[] \textbf{ACT-1000}: Introduction à l’actuariat I
+	\item[] \textbf{ACT-1001}: Mathématiques financières
+	\item[] \textbf{ACT-1002}: Analyse probabiliste 
+	\item[] \textbf{ACT-1003}: Compl. de mathématiques
+	\item[] \textbf{IFT-1902}: Informatique pour actuaires
+\end{enumerate}
+\end{algo}
+
+
+\bigskip
+
+
+\begin{algo}{Réussis - Hiver 2018}
+\begin{enumerate}
+	\item[] \textbf{ACT-1006}: Gestion du risque financier I              
+	\item[] \textbf{ACT-2000}: Analyse statistique
+	\item[] \textbf{ACT-2001}: Introduction à l’actuariat II
+	\item[] \textbf{ACT-2002}: Méthodes numériques   
+	\item[] \textbf{CTB-1000}: Comptabilité générale
+\end{enumerate}
+\end{algo}
+
+
+\bigskip
+
+
+\begin{algo}{Réussi - Été 2019}
+\begin{enumerate}
+	\item[] \textbf{ECN-1000}: Principes de microéconomie                    
+\end{enumerate}
+\end{algo}
+
+\vfill\null 
+\columnbreak
+
+\center{\textbf{Année 2}}
+
+\medskip
+
+\begin{algo3}{En cours - Automne 2019}
+\begin{enumerate}
+	\item[] \textbf{ACT-2003}: Modèles linéaires                                 
+	\item[] \textbf{ACT-2004}: Mathématiques vie I       
+	\item[] \textbf{ACT-2005}: Mathématiques IARD I     
+	\item[] \textbf{ACT-2009}: Processus stochastiques 
+\end{enumerate}
+\end{algo3}
+
+\bigskip
+
+\begin{algo3}{À faire - Hiver 2020}
+\begin{enumerate}
+	\item[] \textbf{ACT-2011}: Communication en actuariat                            
+	\item[] \textbf{ACT-1005}: Analyse et trait. des risques    
+	\item[] \textbf{ACT-2007}: Mathématiques vie II
+	\item[] \textbf{ACT-2008}: Mathématiques IARD II 
+	\item[] \textbf{ACT-2011}: Gestion du risque fin. II 	
+\end{enumerate}
+\end{algo3}
+
+\bigskip
+
+\begin{algo3}{À faire - Été 2020}
+\begin{enumerate}
+	\item[] \textbf{IFT-1004}: Intro à la prog. \textcolor{brass}{(règle 2)}                                 
+	\item[] \textbf{ECN-1010}: Principes de macroéconomie                             
+\end{enumerate}
+\end{algo3}
+
+\vfill\null 
+\columnbreak
+
+
+\center{\textbf{Année 3}}
+
+\medskip
+
+\begin{algo2}{À faire - Automne 2020 \textit{(étranger)}}
+\begin{enumerate}
+	\item[] Cours à option \textit{(cours d'anglais)}
+	\item[] \textit{Théorie du risque}
+	\item[] Cours à option - \textcolor{blue}{(règle 1)} 
+	\item[] Cours à option - \textcolor{brass}{(règle 2)} 
+\end{enumerate}
+\end{algo2}
+
+
+\medskip
+
+
+\begin{algo2}{À faire - Hiver 2021}
+\begin{enumerate}
+	\item[] \textbf{ACT-3001} : Législation et responsabilité      
+	\item[] \textbf{ACT-3114} : Apprentissage stat.\textcolor{blue}{(règle 1)} 
+	\item[] \textbf{ACT-2101} : Recherche \textcolor{blue}{(règle 1)} 
+	\item[] \textbf{MRK-1000} : Marketing \textcolor{brass}{(règle 2)}   
+\end{enumerate}
+\end{algo2}
+
+
+\end{multicols*}
+\end{document}

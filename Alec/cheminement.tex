@@ -1,0 +1,193 @@
+\documentclass[10pt, french]{article}
+\usepackage[landscape, hmargin=1cm, vmargin=1.7cm]{geometry}
+\usepackage{multicol}
+
+
+\usepackage{tikz}
+
+%% -----------------------------
+%% tcolorbox configuration
+%% -----------------------------
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{xparse}
+\tcbuselibrary{breakable}
+
+%%
+%% Coloured box "definition" for definitions
+%%
+\DeclareTColorBox{definition}{ o }				% #1 parameter
+{
+	colframe=blue!60!green,colback=blue!5!white, % color of the box
+	breakable, 
+	pad at break* = 0mm, 						% to split the box
+	title = {#1},
+	after title = {\large \hfill \faBook}
+}
+%%
+%% Coloured box "algo" for algorithms
+%%
+\newtcolorbox{algo}[ 1 ]
+{
+	colback = blue!5!white,
+	colframe = blue!75!black,
+	fonttitle = \bfseries,
+	title = {#1},
+	valign = center
+}
+\newtcolorbox{algo2}[ 1 ]
+{
+	colback = blue!5!white,
+	colframe = teal!75!black,
+	fonttitle = \bfseries,
+	title = {#1},
+	valign = center
+}
+\newtcolorbox{algo3}[ 1 ]
+{
+	colback = blue!5!white,
+	colframe = purple!60!black,
+	fonttitle = \bfseries,
+	title = {#1},
+	valign = center
+}
+%%
+%% Coloured box "formula" for formulas
+%%
+\newtcolorbox{formula}[ 1 ]
+{
+	colback = green!5!white,
+	colframe = green!75!black,
+	fonttitle = \bfseries,title=#1
+}
+
+
+\begin{document}
+
+\section*{Cheminement}
+
+\begin{multicols*}{2}
+
+\begin{algo2}{Complétés automne 2017}
+\begin{enumerate}
+	\item[] \textbf{CTB-1000}: Comptabilité générale
+	\item[] \textbf{ACT-1899}: Équivalence de crédits \textit{(cours à option de règle 2)}
+	\item[] \textbf{ACT-1899}: Équivalence de crédits \textit{(cours à option de règle 2)}
+	\item[] \textit{COM-1899}: Équivalence de crédits \textit{(Cours d’anglais ou de langues)}
+\end{enumerate}
+\end{algo2}
+
+%\begin{tcbraster}[raster columns=2, rows = 2, raster equal height]
+
+\begin{algo}{Complétés automne 2018}
+\begin{enumerate}
+	\item[] \textbf{ACT-1000}: Introduction à l’actuariat I
+	\item[] \textbf{ACT-1001}: Mathématiques financières
+	\item[] \textbf{ACT-1002}: Analyse probabiliste des risques actuariels
+	\item[] \textbf{ACT-1003}: Compléments de mathématiques
+	\item[] \textbf{IFT-1902}: Prog. avec R pour l'analyse de données
+\end{enumerate}
+\end{algo}
+
+
+
+\begin{algo}{Complétés hiver 2019}
+\begin{enumerate}
+	\item[] \textbf{ACT-1006}: Gestion du risque financier I              
+	\item[] \textbf{ACT-2000}: Analyse statistique des risques actuariels 
+	\item[] \textbf{ACT-2001}: Introduction à l’actuariat II
+	\item[] \textbf{ACT-2002}: Méthodes numériques                        
+\end{enumerate}
+\end{algo}
+
+
+
+\begin{algo2}{Habituellement complétés hiver 2019}
+\begin{enumerate}
+	\item[] \textbf{CTB-1000}: Comptabilité générale
+\end{enumerate}
+\end{algo2}
+
+\begin{algo2}{Complétés été 2019}
+\begin{enumerate}
+	\item[] \textbf{ECN-1000}: Principes de microéconomie
+	\item[] \textbf{ECN-1010}: Principes de macroéconomie
+\end{enumerate}
+\end{algo2}
+
+
+
+\begin{algo}{Complétés automne 2019}
+\begin{enumerate}
+	\item[] \textbf{ACT-2003}: Modèles linéaires                                 
+	\item[] \textbf{ACT-2004}: Mathématiques actuarielles vie I       
+	\item[] \textbf{ACT-2005}: Mathématiques actuarielles IARD I     
+	\item[] \textbf{ACT-2009}: Processus stochastiques                           
+\end{enumerate}
+\end{algo}
+
+\begin{algo2}{Habituellement complétés automne 2019}
+\begin{enumerate}
+	\item[] \textbf{ECN-1000}: Principes de microéconomie            
+\end{enumerate}
+\end{algo2}
+
+\begin{algo3}{À faire hiver 2020}
+\begin{enumerate}
+	\item[] \textbf{ACT-2007}: Mathématiques actuarielles vie II         
+	\item[] \textbf{ACT-2008}: Mathématiques actuarielles IARD II        
+	\item[] \textbf{ACT-2011}: Gestion du risque financier II                     
+	\item[] \textcolor{green!60!black}{\textbf{ACT-1005}: Analyse et traitement collectif du risque} 
+	\item[] \textcolor{green!60!black}{\textbf{FRN-2900}: Communication en actuariat}
+\end{enumerate}
+\end{algo3}
+
+\begin{formula}{À faire été 2020}
+\begin{enumerate}
+	\item[] \textbf{FRN-3003}: Français avancé: grammaire et rédaction II
+	\item[] \textit{\textcolor{brown!60!black}{\textbf{ACT-XYXY}: cours à option de règle 2 \textit{(3 de 3)}}}
+\end{enumerate}
+\end{formula}
+
+\newpage
+
+\begin{algo3}{À faire automne 2020}
+\begin{enumerate}
+	\item[] \textbf{ACT-3000}: Théorie du risque
+	\item[] \textbf{ACT-XYXY}: cours à option de règle 1 \textit{(1 de 3)}
+	\item[] \textbf{ACT-XYXY}: cours à option de règle 1 \textit{(2 de 3) }
+\end{enumerate}
+\end{algo3}
+
+\begin{algo2}{Habituellement complétés automne 2020}
+\begin{enumerate}
+	\item[] \textbf{ACT-1899}: cours à option de règle 2                \textit{(1 de 3)}
+	\item[] \textit{ACT-42}: Cours d’anglais ou de langues
+\end{enumerate}
+\end{algo2}
+
+\begin{algo3}{À faire hiver 2021}
+\begin{enumerate}
+	\item[] \textbf{ACT-3001}: Législation et responsabilité prof. en act.
+	\item[] \textbf{ACT-4105/ACT-3114/ACT-2101}: cours à option de règle 1 \textit{(3 de 3)}
+	\item[] \textcolor{brown!60!black}{\textbf{ACT-XYXY}: cours à option de règle 2 \textit{(3 de 3)}}
+	\item[] \textit{\textcolor{green!60!black}{\textbf{ACT-1005}: Analyse et traitement collectif du risque}}
+	\item[] \textit{\textcolor{green!60!black}{\textbf{FRN-2900}: Communication en actuariat}}
+\end{enumerate}
+\end{algo3}
+
+\begin{algo2}{Habituellement complété hiver 2021}
+\begin{enumerate}
+	\item[] \textbf{ACT-1899}: cours à option de règle 2 \textit{(2 de 3)}
+	\item[] \textbf{ECN-1010}: Principes de macroéconomie
+\end{enumerate}
+\end{algo2}
+ 
+\end{multicols*}
+
+\section*{Cheminement considéré}
+
+\begin{multicols*}{2}
+
+\end{multicols*}
+
+\end{document}
